@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  argocd:
+    image: argoproj/argocd:latest
+    command: ["argocd-server", "--insecure"]
+    ports:
+      - "8080:8080"
+
+  backstage:
+    image: backstage/backstage:latest
+    ports:
+      - "3000:3000"

@@ -1,0 +1,14 @@
+name: Enterprise Multi-Cluster Kubernetes Platform
+author: K Padma Sri
+description: GitOps-based enterprise Kubernetes platform with multi-cluster support
+technologies:
+  - Kubernetes
+  - ArgoCD
+  - Istio
+  - OPA Gatekeeper
+  - Terraform
+features:
+  - Multi-cluster GitOps
+  - Service mesh
+  - Policy enforcement
+  - Developer portal

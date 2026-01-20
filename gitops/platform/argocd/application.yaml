@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: platform-services
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/padmasrikollaparthi/enterprise-multi-cluster-k8s-platform.git
+    path: gitops/platform/argocd
+    targetRevision: HEAD
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: platform
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
